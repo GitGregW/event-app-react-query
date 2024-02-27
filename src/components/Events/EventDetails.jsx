@@ -43,7 +43,7 @@ export default function EventDetails() {
           <header>
             <h1>{ data.title }</h1>
             <nav>
-              { isDeleting ? <LoadingIndicator /> : <button onClick={handleDelete}>Delete</button> }
+              { isDeleting ? 'Deleting Event...' : <button onClick={handleDelete}>Delete</button> }
               <Link to="edit">Edit</Link>
             </nav>
           </header>

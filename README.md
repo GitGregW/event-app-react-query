@@ -21,3 +21,7 @@ Completed:
 - Both useQuery and useMutate to fetch and update the according event (EditEvent.jsx)
 
 - /util/http.js added editEvent function to manage the PUT request to the backend
+
+Revisited:
+- Actual solution I've learnt the useIsFetching hook which can be used in any component to watch for isFetching state app-wide; this is now applied in the Header.jsx componenet to build a visible progress bar
+- An alternative solution to only using useQuery is to combine it with the React Router loader and action functions (not useLoaderData as will want to keep React Query caching); enables the Router to manage error state/component, as well as initialise/load queries, the action functions can handle requests such as form data and call http API's directly

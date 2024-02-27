@@ -48,7 +48,7 @@ export default function EditEvent() {
         <Link to="../" className="button-text">
           Cancel
         </Link>
-        { isFetchingEdit && <LoadingIndicator /> }
+        { isFetchingEdit && 'Updating Event...' }
         { isErrorEdit &&  <ErrorBlock title={errorEdit.title} message={errorEdit.message} /> }
         { !isFetchingEdit && !isErrorEdit && <button type="submit" className="button">
             Update

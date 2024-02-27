@@ -93,10 +93,9 @@ export async function deleteEvent({ id }) {
 }
 
 export async function editEvent(eventData) {
-  console.log(eventData.event);
   const response = await fetch(`http://localhost:3000/events/${eventData.event.id}`, {
     method: 'PUT',
-    body: JSON.stringify({eventData}),
+    body: JSON.stringify(eventData),
     headers: {
       'Content-Type': 'application/json',
     },

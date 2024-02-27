@@ -76,7 +76,8 @@ app.get('/events/:id', async (req, res) => {
 
 app.post('/events', async (req, res) => {
   const { event } = req.body;
-
+  console.log('post: ' . id);
+  console.log(event);
   if (!event) {
     return res.status(400).json({ message: 'Event is required' });
   }
@@ -112,6 +113,8 @@ app.post('/events', async (req, res) => {
 app.put('/events/:id', async (req, res) => {
   const { id } = req.params;
   const { event } = req.body;
+  console.log(id);
+  console.log(event);
 
   if (!event) {
     return res.status(400).json({ message: 'Event is required' });
